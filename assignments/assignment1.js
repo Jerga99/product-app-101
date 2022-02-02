@@ -1,4 +1,5 @@
 
+
 alert("Assignment 1");
 
 // 1. create a function called "displayName"
@@ -10,3 +11,14 @@ alert("Assignment 1");
 
 // WRITE CODE UNDER THIS LINE
 // -------------------------
+
+
+function displayName() {
+  const firstName = "Filip";
+  const lastName = "Jerga";
+  const fullName = "[" + firstName + " " + lastName + "]";
+  console.log(fullName);
+}
+
+displayName();
+displayName();
