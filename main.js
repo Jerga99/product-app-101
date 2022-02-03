@@ -1,25 +1,13 @@
 
 
-console.log("Starting our app");
+const productName = "Laptop";
+const productType = "eletronics";
+const productPrice = 200;
+const productCurrency = "usd";
+const productImage = "some_url_of_image";
 
-function computeRectangleArea(a, b) {
-  const area = a * b;
-
-  return area;
-}
-
-const rectangleArea = computeRectangleArea(10, 5);
-console.log(rectangleArea)
-
-computeRectangleArea(100, 7);
-
-const x = 50;
-const y = 3;
-
-computeRectangleArea(x, y);
-computeRectangleArea(x, 45);
-computeRectangleArea(true, false);
-computeRectangleArea("fili", "kili");
-
-
-console.log("Finishing our app");
+console.log(productName);
+console.log(productType);
+console.log(productPrice);
+console.log(productCurrency);
+console.log(productImage);
