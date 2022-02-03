@@ -1,24 +1,23 @@
 
 
-
-// function declaration
-function computeRectangleArea() {
-  // 2 variable a and b
-  // compute area of rectangle
-  // console.log the results
-
-  const a = 10;
-  const b = 5;
+//                     function parameters
+function computeRectangleArea(a, b) {
   const area = a * b;
   console.log(area);
 }
 
 
 // function execution
-computeRectangleArea();
-computeRectangleArea();
-computeRectangleArea();
-computeRectangleArea();
-computeRectangleArea();
-computeRectangleArea();
+//                   arguments
+computeRectangleArea(10, 5);
+
+computeRectangleArea(100, 7);
+
+const x = 50;
+const y = 3;
+
+computeRectangleArea(x, y);
+computeRectangleArea(x, 45);
+computeRectangleArea(true, false);
+computeRectangleArea("fili", "kili");
 
