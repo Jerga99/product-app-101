@@ -9,5 +9,14 @@ const product = {
   image: "some_url_of_image"
 }
 
-console.log(product);
+console.log(product.name);
 
+console.log(product["type"]);
+
+const currencyKey = "currency";
+
+console.log(product[currencyKey]);
+
+console.log(product.price * 100);
+
+console.log(product.price + " " + product.currency)
