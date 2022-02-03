@@ -1,15 +1,15 @@
 
 
-//                     function parameters
+console.log("Starting our app");
+
 function computeRectangleArea(a, b) {
   const area = a * b;
-  console.log(area);
+
+  return area;
 }
 
-
-// function execution
-//                   arguments
-computeRectangleArea(10, 5);
+const rectangleArea = computeRectangleArea(10, 5);
+console.log(rectangleArea)
 
 computeRectangleArea(100, 7);
 
@@ -21,3 +21,5 @@ computeRectangleArea(x, 45);
 computeRectangleArea(true, false);
 computeRectangleArea("fili", "kili");
 
+
+console.log("Finishing our app");
