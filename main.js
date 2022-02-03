@@ -1,13 +1,13 @@
 
+// it' a structure that can hold multiple values grouped together
+// key - value pairs
+const product = {
+  name: "Laptop",
+  type: "eletronics",
+  price: 200,
+  currency: "usd",
+  image: "some_url_of_image"
+}
 
-const productName = "Laptop";
-const productType = "eletronics";
-const productPrice = 200;
-const productCurrency = "usd";
-const productImage = "some_url_of_image";
+console.log(product);
 
-console.log(productName);
-console.log(productType);
-console.log(productPrice);
-console.log(productCurrency);
-console.log(productImage);
