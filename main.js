@@ -1,7 +1,8 @@
 
 // it' a structure that can hold multiple values grouped together
 // key - value pairs
-const product = {
+debugger
+const product1 = {
   name: "Laptop",
   type: "eletronics",
   price: 200,
@@ -9,14 +10,22 @@ const product = {
   image: "some_url_of_image"
 }
 
-console.log(product.name);
+const product2 = {
+  name: "Super shoes",
+  type: "clothing",
+  price: 50,
+  currency: "usd",
+  image: "some_url_of_image"
+}
 
-console.log(product["type"]);
+function displayProductInfo(product) {
+  console.log("Name: ", product.name);
+  console.log("Type: " + product.type);
+  console.log("Price: " + product.price);
+  console.log("Curency: " + product.currency);
+  console.log("Image: " + product.image);
+  console.log("------------------------")
+}
 
-const currencyKey = "currency";
-
-console.log(product[currencyKey]);
-
-console.log(product.price * 100);
-
-console.log(product.price + " " + product.currency)
+displayProductInfo(product1);
+displayProductInfo(product2);
