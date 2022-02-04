@@ -16,7 +16,21 @@ alert("Assignment2 has been loaded!");
 // implement your assignment under this line
 // ----------------------------------------
 
+function createRectangle(name, a, b) {
+  return {
+    name,
+    a,
+    b
+  }
+}
 
+function getRectangleInfo(rectangle) {
+  const area = rectangle.a * rectangle.b;
+  const circumference = 2 * (rectangle.a + rectangle.b);
+
+  console.log("Area of rectangle " + rectangle.name + " is " + area);
+  console.log("Circumference of rectangle " + rectangle.name + " is " + circumference);
+}
 
 const rectangle1 = createRectangle("First rectangle", 10, 5);
 const rectangle2 = createRectangle("Second rectangle", 3, 5);
