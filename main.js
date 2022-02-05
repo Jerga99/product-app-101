@@ -40,7 +40,19 @@ const mixedList = [1, "Lion", 40, true, 3.14, function(){}, {name: "Filip"}];
 
 const products = [product1, product2, product3, product4, product5];
 
-console.log(numberList);
-console.log(names);
-console.log(mixedList);
-console.log(products);
+const index = 4;
+
+console.log(numberList[5]); // 100
+console.log(names[0]); // Greg
+console.log(mixedList[4]); // 3.14
+console.log(products[3]); // product4 { name: "fancy hat", ....}
+console.log(products[index]); // product5 { name: "skateboard", ...}
+console.log(mixedList[1+1]); // 40
+console.log(mixedList[1-2]); // undefined
+
+console.log(products[products.length - 1]); // product5 { name: "skateboard", ...}
+console.log(products[products.length]); // undefined
+
+console.log(products[2].name); // Default name
+
+
