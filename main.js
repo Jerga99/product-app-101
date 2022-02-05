@@ -42,17 +42,30 @@ const products = [product1, product2, product3, product4, product5];
 
 const index = 4;
 
-console.log(numberList[5]); // 100
-console.log(names[0]); // Greg
-console.log(mixedList[4]); // 3.14
-console.log(products[3]); // product4 { name: "fancy hat", ....}
-console.log(products[index]); // product5 { name: "skateboard", ...}
-console.log(mixedList[1+1]); // 40
-console.log(mixedList[1-2]); // undefined
+const conditional1 = 100 > 150;
+const conditional2 = 3 < 10;
+const conditional3 = 3 === 2;
 
-console.log(products[products.length - 1]); // product5 { name: "skateboard", ...}
-console.log(products[products.length]); // undefined
+const conditional4 = 3 == "3";
+const conditional5 = 11 >= 11;
+const conditional6 = 15 <= 16;
+const conditional7 = product1.price > product3.price;
+const conditional8 = products.length < 10;
+// tricky one: you can call "length" on string
+const conditional9 = "Hello There".length < 8;
+const conditional10 = products[1].name.length > 10;
+// tricky one, you can think of true as 1 (something is turned on)
+// false as 0 (something is turned off)
+const conditional11 = true > false;
 
-console.log(products[2].name); // Default name
-
-
+console.log(conditional1);
+console.log(conditional2);
+console.log(conditional3);
+console.log(conditional4); // true
+console.log(conditional5); // true
+console.log(conditional6); // true
+console.log(conditional7); // false
+console.log(conditional8); // true
+console.log(conditional9); // false
+console.log(conditional10); // true
+console.log(conditional11); // true
