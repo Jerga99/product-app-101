@@ -58,14 +58,36 @@ const conditional10 = products[1].name.length > 10;
 // false as 0 (something is turned off)
 const conditional11 = true > false;
 
-console.log(conditional1);
-console.log(conditional2);
-console.log(conditional3);
-console.log(conditional4); // true
-console.log(conditional5); // true
-console.log(conditional6); // true
-console.log(conditional7); // false
-console.log(conditional8); // true
-console.log(conditional9); // false
-console.log(conditional10); // true
-console.log(conditional11); // true
+
+
+if (100 > 150) {
+  console.log("150 is larger than 100");
+}
+
+if (conditional3) {
+  console.log("3 === 2");
+} else {
+  console.log("3 is not equal to 2");
+}
+
+const justSomeVariable = false;
+
+if (product1.price < product2.price) {
+  console.log("product1 price is > than product2 price")
+} else if (product2.price > product3.price) {
+  console.log("product2 price is > than product3 price")
+} else if (justSomeVariable) {
+  console.log("just some variable");
+} else {
+  console.log("Nothing true so we are in else!");
+}
+
+if (false) {
+  console.log("");
+} else if (false) {
+  console.log("");
+} else if (false) {
+  console.log("")
+} else {
+  console.log("");
+}
