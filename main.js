@@ -32,9 +32,15 @@ const product3 = createProduct();
 const product4 = createProduct("Fancy Hat", "clothing", 100);
 const product5 = createProduct("Skateboard");
 
+const numberList = [1, 3, 2, 50, 30, 100];
+const names = ["Greg", "Kate", "Rob", "Marta"];
 
-displayProductInfo(product1);
-displayProductInfo(product2);
-displayProductInfo(product3);
-displayProductInfo(product4);
-displayProductInfo(product5);
+// not recommended
+const mixedList = [1, "Lion", 40, true, 3.14, function(){}, {name: "Filip"}];
+
+const products = [product1, product2, product3, product4, product5];
+
+console.log(numberList);
+console.log(names);
+console.log(mixedList);
+console.log(products);
