@@ -42,18 +42,4 @@ const products = [product1, product2, product3, product4, product5];
 
 
 
-// if ((product1.price > product2.price) && (product3.price > product4.price)) {
-//   console.log("yey");
-// } else {
-//   console.log("no");
-// }
-
-if (
-  (numberList[0] > numberList[1]) ||
-  (numberList[numberList.length - 1] > numberList[numberList.length - 2])
-) {
-  console.log("yey");
-} else {
-  console.log("non");
-}
 
