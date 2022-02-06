@@ -16,14 +16,32 @@ alert("Assignment3!");
 // CODE UNDER THIS LINE
 // ----------------------------
 
+function doWeirdStuff(num, text) {
+  if (num > text.length) {
+    console.log("Number Won!");
+  } else {
+    console.log("String Won!");
+  }
 
+  if (num + text.length > 20) {
+    console.log(num + text.length);
+  }
 
-// doWeirdStuff(7, "Hello");
-// console.log("---------")
-// doWeirdStuff(15, "Hello World!");
-// console.log("---------")
-// doWeirdStuff(15, "What a beautiful day");
-// console.log("---------")
-// doWeirdStuff(10, "Oak");
-// console.log("---------")
-// doWeirdStuff(0, "Tree");
+  if (num > 5 && text.length > 10) {
+    console.log("The number is greater than 5 and the string is greater than 10")
+  }
+
+  if (num === 0 || text[0] === "O") {
+    console.log("Oooooops");
+  }
+}
+
+doWeirdStuff(7, "Hello");
+console.log("---------")
+doWeirdStuff(15, "Hello World!");
+console.log("---------")
+doWeirdStuff(15, "What a beautiful day");
+console.log("---------")
+doWeirdStuff(10, "Oak");
+console.log("---------")
+doWeirdStuff(0, "Tree");
