@@ -35,10 +35,29 @@ const product5 = createProduct("Skateboard");
 
 const products = [product1, product2, product3, product4, product5];
 
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-  console.log(products[i].name);
-}
+products.forEach(function(product) {
+  console.log(product.name);
+})
+
+// for (let i = 0; i < products.length; i++) {
+//   console.log(i);
+//   console.log(products[i].name);
+// }
+
+// let i = 0;
+// while (i < products.length) {
+//   console.log(products[i].price);
+//   i++;
+// }
+
+// let i = 6;
+// do {
+//   console.log(products[i].type);
+//   i++;
+// } while (i < products.length);
+
+console.log("After the loop")
+
 
 
 
