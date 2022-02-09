@@ -2,34 +2,33 @@
 
 
 
-function createProduct(
+function Product(
   name = "Default Name",
   type,
   price,
   currency = "usd",
   image = "unsplash_url"
 ) {
-  return {
-    name, // name: name
-    type,
-    price,
-    currency,
-    image,
-    displayInfo: function() {
-      console.log("Name: " + this.name);
-      console.log("Type: " + this.type);
-      console.log("Price: " + this.price);
-      console.log("Currency: " + this.currency);
-      console.log("Image: " + this.image);
-    }
+
+  this.name = name;
+  this.type = type;
+  this.price = price;
+  this.currency = currency;
+  this.image = image;
+  this.displayInfo = function() {
+    console.log("Name: " + this.name);
+    console.log("Type: " + this.type);
+    console.log("Price: " + this.price);
+    console.log("Currency: " + this.currency);
+    console.log("Image: " + this.image);
   }
 }
 
-const product1 = createProduct("Laptop", "eletronics", 500, "usd", "some_url_of_image");
-const product2 = createProduct("Super shoes", "clothing", 50, "usd", "some_url_of_image");
-const product3 = createProduct();
-const product4 = createProduct("Fancy Hat", "clothing", 100);
-const product5 = createProduct("Skateboard");
+const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
+const product2 = new Product("Super shoes", "clothing", 50, "usd", "some_url_of_image");
+const product3 = new Product();
+const product4 = new Product("Fancy Hat", "clothing", 100);
+const product5 = new Product("Skateboard");
 
 const products = [product1, product2, product3, product4, product5];
 
