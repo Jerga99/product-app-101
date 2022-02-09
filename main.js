@@ -16,8 +16,11 @@ function createProduct(
     currency,
     image,
     displayInfo: function() {
-      console.log(this);
-      console.log("Calling display info!");
+      console.log("Name: " + this.name);
+      console.log("Type: " + this.type);
+      console.log("Price: " + this.price);
+      console.log("Currency: " + this.currency);
+      console.log("Image: " + this.image);
     }
   }
 }
@@ -31,9 +34,9 @@ const product5 = createProduct("Skateboard");
 const products = [product1, product2, product3, product4, product5];
 
 for (let i = 0; i < products.length; i++) {
-  debugger
   const product = products[i];
   product.displayInfo();
+  console.log("--------------------");
 }
 
 
