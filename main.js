@@ -24,6 +24,11 @@ function Product(
   }
 }
 
+Product.prototype.displayInfo2 = function() {
+  console.log(this.name + " " + this.type);
+}
+
+
 const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
 const product2 = new Product("Super shoes", "clothing", 50, "usd", "some_url_of_image");
 const product3 = new Product();
@@ -35,6 +40,7 @@ const products = [product1, product2, product3, product4, product5];
 for (let i = 0; i < products.length; i++) {
   const product = products[i];
   product.displayInfo();
+  product.displayInfo2();
   console.log("--------------------");
 }
 
