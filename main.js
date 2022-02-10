@@ -37,12 +37,22 @@ const product5 = new Product("Skateboard");
 
 const products = [product1, product2, product3, product4, product5];
 
-for (let i = 0; i < products.length; i++) {
-  const product = products[i];
-  product.displayInfo();
-  product.displayInfo2();
-  console.log("--------------------");
-}
+products[0].name = "Phone";
+
+const product100 = product1;
+
+product100.image = "No Image";
+
+console.log(products[0].image);
+console.log(product1.image);
+console.log(product100.image);
+
+// for (let i = 0; i < products.length; i++) {
+//   const product = products[i];
+//   product.displayInfo();
+//   product.displayInfo2();
+//   console.log("--------------------");
+// }
 
 
 
