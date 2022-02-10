@@ -25,14 +25,23 @@ class Product {
   }
 }
 
+class FancyProduct extends Product {
+  fancyFunction() {
+    console.log("I am a fancy product!!!!");
+  }
+}
+
+debugger
 const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
 const product2 = new Product("Super shoes", "clothing", 50, "usd", "some_url_of_image");
 const product3 = new Product();
 const product4 = new Product("Fancy Hat", "clothing", 100);
 const product5 = new Product("Skateboard");
+const product6 = new FancyProduct("fancy socks");
 
+product6.fancyFunction();
 
-const products = [product1, product2, product3, product4, product5];
+const products = [product1, product2, product3, product4, product5, product6];
 
 for (let i = 0; i < products.length; i++) {
   const product = products[i];
