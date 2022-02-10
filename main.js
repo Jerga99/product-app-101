@@ -1,4 +1,6 @@
 
+
+
 runApp();
 
 function runApp() {
@@ -64,7 +66,6 @@ function runApp() {
   // not available
   // console.log(person);
 
-  debugger
   if (true) {
     let againScope = "if scope";
     console.log(againScope);
