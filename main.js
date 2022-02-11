@@ -4,27 +4,6 @@
 runApp();
 
 function runApp() {
-  const outerValue = 1000;
-
-  function sayHello() {
-    const welcome = "Hello there";
-    console.log(welcome);
-
-    function innerHello() {
-      const outerValue = 2000;
-      const innerVariable = "Inner Hello";
-      // Notice Closure when uncommented
-      console.log(outerValue);
-      console.log(welcome);
-      console.log(outerValue);
-      console.log(innerVariable);
-    }
-
-    // console.log(innerVariable);
-    innerHello();
-  }
-
-  // innerHello()
 
   class Product {
     constructor(
@@ -42,11 +21,14 @@ function runApp() {
     }
 
     displayInfo() {
-      console.log("Name: " + this.name);
-      console.log("Type: " + this.type);
-      console.log("Price: " + this.price);
-      console.log("Currency: " + this.currency);
-      console.log("Image: " + this.image);
+      const info = `
+      Name: ${this.name}
+      Type: ${this.type}
+      Price: ${this.price}
+      Currency: ${this.currency}
+      Image: ${this.image}`;
+
+      console.log(info);
     }
   }
 
@@ -55,24 +37,6 @@ function runApp() {
       console.log("I am a fancy product!!!!");
     }
   }
-
-  sayHello();
-
-  {
-    let person = "Filip Jerga";
-    console.log(person);
-  }
-
-  // not available
-  // console.log(person);
-
-  if (true) {
-    let againScope = "if scope";
-    console.log(againScope);
-  }
-
-  // not available
-  // console.log(againScope);
 
   const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
   const product2 = new Product("Super shoes", "clothing", 50, "usd", "some_url_of_image");
