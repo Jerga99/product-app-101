@@ -42,6 +42,11 @@ function runApp() {
     fancyFunction() {
       console.log("I am a fancy product!!!!");
     }
+
+    displayInfo() {
+      super.displayInfo();
+      console.log("Has Insurance: ", this.hasInsurance);
+    }
   }
 
   const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
@@ -63,6 +68,7 @@ function runApp() {
 
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
+    debugger
     product.displayInfo();
     console.log("-----------------");
   }
