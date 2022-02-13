@@ -20,13 +20,14 @@ function runApp() {
       this.image = image;
     }
 
-    displayInfo() {
+    displayInfo(additionalInfo = "") {
       const info = `
       Name: ${this.name}
       Type: ${this.type}
       Price: ${this.price}
       Currency: ${this.currency}
-      Image: ${this.image}`;
+      Image: ${this.image}
+      ${additionalInfo}`;
 
       console.log(info);
     }
@@ -44,8 +45,7 @@ function runApp() {
     }
 
     displayInfo() {
-      super.displayInfo();
-      console.log("Has Insurance: ", this.hasInsurance);
+      super.displayInfo(`Has Insurance: ${this.hasInsurance}`);
     }
   }
 
@@ -68,7 +68,6 @@ function runApp() {
 
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
-    debugger
     product.displayInfo();
     console.log("-----------------");
   }
