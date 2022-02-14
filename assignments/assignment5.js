@@ -31,8 +31,48 @@ alert("Assignment 5");
 // CODE UNDER THIS LINE
 // ----------------------------
 
+// class Square {
+//   constructor(a) {
+//     this.a = a;
+//   }
 
+//   computeArea() {
+//     const area = this.a * this.a;
+//     return area;
+//   }
+// }
 
+// class Rectangle {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+
+//   computeArea() {
+//     const area = this.a * this.b;
+//     return area;
+//   }
+// }
+
+// IMPROVED
+
+class Square {
+  constructor(a, b = a) {
+    this.a = a;
+    this.b = b;
+  }
+
+  computeArea() {
+    const area = this.a * this.b;
+    return area;
+  }
+}
+
+class Rectangle extends Square {
+  constructor(a, b) {
+    super(a, b);
+  }
+}
 
 const square = new Square(10);
 const rectangle = new Rectangle(10, 5);
