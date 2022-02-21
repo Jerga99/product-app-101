@@ -14,3 +14,12 @@
   font-weight: bold;
   font-size: 25px;
 }
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.page {
+  padding-top: 50px;
+}
