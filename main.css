@@ -4,6 +4,7 @@
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
+  display: inline-block;
 }
 
 .product-field {
@@ -17,7 +18,7 @@
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1480px;
   margin: auto;
 }
 
