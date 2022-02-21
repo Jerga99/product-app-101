@@ -1,0 +1,12 @@
+.product {
+  padding: 20px;
+}
+
+.product-field {
+  font-size: 20px;
+}
+
+.product-label {
+  font-weight: bold;
+  font-size: 25px;
+}
