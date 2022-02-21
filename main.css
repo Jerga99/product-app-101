@@ -18,10 +18,19 @@
 }
 
 .container {
+  position: relative;
   max-width: 1480px;
   margin: auto;
 }
 
 .page {
   padding-top: 50px;
+  height: 2000px;
+}
+
+#product4 {
+  position: fixed;
+
+  top: 200px;
+  left: 200px;
 }
