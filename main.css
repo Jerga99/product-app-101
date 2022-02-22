@@ -13,6 +13,7 @@
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
+  width: 250px;
 }
 
 .product-field {
@@ -27,7 +28,7 @@
 
 .product-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 
