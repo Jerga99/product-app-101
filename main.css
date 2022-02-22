@@ -13,15 +13,14 @@
   border: 1px solid black;
   padding: 20px;
   height: 180px;
-  flex: 1;
 }
 
 #product2 {
-  flex: 2;
+  align-self: center;
 }
 
 #product3 {
-  flex: 2;
+  align-self: flex-end;
 }
 
 .product-field {
@@ -37,7 +36,7 @@
 .product-list {
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 
