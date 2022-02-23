@@ -5,6 +5,12 @@ runApp();
 
 function runApp() {
 
+
+  const productElement = document.getElementById("product1");
+  productElement.addEventListener("click", function() {
+    console.log("Hello World");
+  })
+
   class Product {
     constructor(
       name = "Default Name",
