@@ -5,11 +5,31 @@ runApp();
 
 function runApp() {
 
-
   const productElement = document.getElementById("product1");
-  productElement.addEventListener("click", function() {
+
+  function clickHandler() {
     console.log("Hello World");
-  })
+  }
+
+  productElement.addEventListener("click", clickHandler)
+
+  function callbackFunction(message) {
+    console.log(message);
+  }
+
+  function myCustomFunction(fn) {
+    fn("My custom message");
+  }
+
+  const functionRef = function() {
+    console.log("Hi There Const!");
+  }
+
+  functionRef();
+
+  const functionRef2 = callbackFunction;
+
+  myCustomFunction(functionRef2);
 
   class Product {
     constructor(
