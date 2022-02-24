@@ -5,31 +5,31 @@ runApp();
 
 function runApp() {
 
-  const productElement = document.getElementById("product1");
+  const productElement1 = document.getElementById("product1");
+  const productElement2 = document.getElementById("product2");
+  const productElement3 = document.getElementById("product3");
+  const productElement4 = document.getElementById("product4");
+
+  const clickHandler2 = createClickHandler("Hi There!");
+
+  productElement1.addEventListener("click", clickHandler);
+  productElement2.addEventListener("click", clickHandler2);
+  productElement3.addEventListener("click", createClickHandler("I have no idea"));
+  productElement4.addEventListener("click", function() {
+    console.log("I am annonymous function!");
+  });
 
   function clickHandler() {
     console.log("Hello World");
   }
 
-  productElement.addEventListener("click", clickHandler)
-
-  function callbackFunction(message) {
-    console.log(message);
+  function createClickHandler(message) {
+    const name = "Filip"
+    return function() {
+      console.log(message + " " + name);
+    }
   }
 
-  function myCustomFunction(fn) {
-    fn("My custom message");
-  }
-
-  const functionRef = function() {
-    console.log("Hi There Const!");
-  }
-
-  functionRef();
-
-  const functionRef2 = callbackFunction;
-
-  myCustomFunction(functionRef2);
 
   class Product {
     constructor(
