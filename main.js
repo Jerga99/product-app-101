@@ -16,7 +16,16 @@ function runApp() {
 
   const createProductElement = () => {
     const productElement = document.createElement("div");
+    const productField = document.createElement("div");
+    const productLabel = document.createElement("span");
+
     productElement.classList.add("product");
+    productField.classList.add("product-field");
+    productLabel.classList.add("product-label");
+
+    productField.appendChild(productLabel);
+    productElement.appendChild(productField);
+
     return productElement;
   }
 
