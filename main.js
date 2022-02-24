@@ -6,10 +6,11 @@ runApp();
 function runApp() {
 
   const productElements = document.getElementsByClassName("product");
+  const container = document.getElementById("productContainer");
+  const row = document.createElement("div");
+  row.classList.add("product-row")
+  container.appendChild(row);
 
-  for (let i = 0; i < productElements.length; i++) {
-    productElements[i].addEventListener("click", () => {console.log(`Hello World ${i + 1}`)});
-  }
 
   class Product {
     constructor(
