@@ -7,10 +7,16 @@ function runApp() {
 
   const productElements = document.getElementsByClassName("product");
   const container = document.getElementById("productContainer");
-  const row = document.createElement("div");
-  row.classList.add("product-row")
-  container.appendChild(row);
 
+  const createProductRow = () => {
+    const row = document.createElement("div");
+    row.classList.add("product-row");
+    row.innerHTML = "Hello Row!";
+    container.appendChild(row);
+  }
+
+  createProductRow();
+  createProductRow();
 
   class Product {
     constructor(
