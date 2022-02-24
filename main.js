@@ -11,12 +11,21 @@ function runApp() {
   const createProductRow = () => {
     const row = document.createElement("div");
     row.classList.add("product-row");
-    row.innerHTML = "Hello Row!";
-    container.appendChild(row);
+    return row;
   }
 
-  createProductRow();
-  createProductRow();
+  const createProductElement = () => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+    return productElement;
+  }
+
+  const row =  createProductRow();
+  const productElement = createProductElement();
+
+  row.appendChild(productElement);
+  container.appendChild(row);
+
 
   class Product {
     constructor(
