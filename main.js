@@ -5,32 +5,11 @@ runApp();
 
 function runApp() {
 
-  const productElement1 = document.getElementById("product1");
-  const productElement2 = document.getElementById("product2");
-  const productElement3 = document.getElementById("product3");
-  const productElement4 = document.getElementById("product4");
+  const productElements = document.getElementsByClassName("product");
 
-  // function createClickHandler(message, name) {
-  //   return function() {
-  //     console.log(message + " " + name);
-  //   }
-  // }
-
-  // const createClickHandler = (message, name) => {
-  //   return () => {
-  //     console.log(message + " " + name);
-  //   }
-  // }
-
-  const createClickHandler = (message, name) => () => console.log(message + " " + name);
-
-  const clickHandler = () => console.log("Hello World");
-  const clickHandler2 = createClickHandler("Hi There!", "Kate");
-
-  productElement1.addEventListener("click", clickHandler);
-  productElement2.addEventListener("click", clickHandler2);
-  productElement3.addEventListener("click", createClickHandler("I have no idea", "John"));
-  productElement4.addEventListener("click", () => console.log("I am annonymous function!"));
+  for (let i = 0; i < productElements.length; i++) {
+    productElements[i].addEventListener("click", () => {console.log(`Hello World ${i + 1}`)});
+  }
 
   class Product {
     constructor(
