@@ -23,7 +23,13 @@ function runApp() {
     productField.classList.add("product-field");
     productLabel.classList.add("product-label");
 
+    productLabel.innerHTML = "Name:";
+
+    const text = document.createTextNode("Laptop");
+
     productField.appendChild(productLabel);
+    productField.appendChild(text);
+
     productElement.appendChild(productField);
 
     return productElement;
