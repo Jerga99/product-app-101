@@ -5,47 +5,6 @@ runApp();
 
 function runApp() {
 
-  const productElements = document.getElementsByClassName("product");
-  const container = document.getElementById("productContainer");
-
-  const createProductRow = () => {
-    const row = document.createElement("div");
-    row.classList.add("product-row");
-    return row;
-  }
-
-  const createProductElement = () => {
-    const productElement = document.createElement("div");
-    productElement.classList.add("product");
-
-    const productLabels = ["Name", "Type", "Price", "Currency", "Image"];
-    productLabels.forEach(label => {
-      const productField = document.createElement("div");
-      const productLabel = document.createElement("span");
-
-      productField.classList.add("product-field");
-      productLabel.classList.add("product-label");
-
-      productLabel.innerHTML = `${label}:`;
-      const text = document.createTextNode("In Progress");
-
-      productField.appendChild(productLabel);
-      productField.appendChild(text);
-      productElement.appendChild(productField);
-    })
-
-    return productElement;
-  }
-
-  const row =  createProductRow();
-  const productElement1 = createProductElement();
-  const productElement2 = createProductElement();
-
-  row.appendChild(productElement1);
-  row.appendChild(productElement2);
-  container.appendChild(row);
-
-
   class Product {
     constructor(
       name = "Default Name",
@@ -81,9 +40,44 @@ function runApp() {
 
   const products = [product1, product2, product3, product4];
 
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i];
-    product.displayInfo();
-    console.log("-----------------");
+  const container = document.getElementById("productContainer");
+
+  const createProductRow = () => {
+    const row = document.createElement("div");
+    row.classList.add("product-row");
+    return row;
   }
+
+  const createProductElement = () => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+
+    const productLabels = ["Name", "Type", "Price", "Currency", "Image"];
+    productLabels.forEach(label => {
+      const productField = document.createElement("div");
+      const productLabel = document.createElement("span");
+
+      productField.classList.add("product-field");
+      productLabel.classList.add("product-label");
+
+      productLabel.innerHTML = `${label}:`;
+      const text = document.createTextNode("In Progress");
+
+      productField.appendChild(productLabel);
+      productField.appendChild(text);
+      productElement.appendChild(productField);
+    })
+
+    return productElement;
+  }
+
+  let row;
+
+  products.forEach(product => {
+    const productElement = createProductElement();
+    row = createProductRow();
+    row.appendChild(productElement);
+    container.appendChild(row);
+  })
+
 }
