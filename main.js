@@ -73,9 +73,13 @@ function runApp() {
 
   let row;
 
-  products.forEach(product => {
+  products.forEach((product, i) => {
     const productElement = createProductElement();
-    row = createProductRow();
+
+    if (i % 2 === 0) {
+      row = createProductRow();
+    }
+
     row.appendChild(productElement);
     container.appendChild(row);
   })
