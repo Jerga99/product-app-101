@@ -48,7 +48,7 @@ function runApp() {
     return row;
   }
 
-  const createProductElement = () => {
+  const createProductElement = (product) => {
     const productElement = document.createElement("div");
     productElement.classList.add("product");
 
@@ -61,7 +61,7 @@ function runApp() {
       productLabel.classList.add("product-label");
 
       productLabel.innerHTML = `${label}:`;
-      const text = document.createTextNode("In Progress");
+      const text = document.createTextNode(product[label.toLowerCase()]);
 
       productField.appendChild(productLabel);
       productField.appendChild(text);
@@ -74,14 +74,13 @@ function runApp() {
   let row;
 
   products.forEach((product, i) => {
-    const productElement = createProductElement();
-
+    const productElement = createProductElement(product);
     if (i % 2 === 0) {
       row = createProductRow();
+      container.appendChild(row);
     }
 
     row.appendChild(productElement);
-    container.appendChild(row);
   })
 
 }
