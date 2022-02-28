@@ -40,23 +40,19 @@ function runApp() {
 
   const products = [product1, product2, product3, product4];
 
-  const createProductRow = () => {
-    const row = document.createElement("div");
-    row.classList.add("product-row");
-    return row;
+  const _createElement = (elementType, classList) => {
+    const element = document.createElement(elementType);
+    element.classList.add(classList);
+    return element;
   }
 
   const createProductElement = (product) => {
-    const productElement = document.createElement("div");
-    productElement.classList.add("product");
+    const productElement = _createElement("div", "product");
 
     const productLabels = ["Name", "Type", "Price", "Currency", "Image"];
     productLabels.forEach(label => {
-      const productField = document.createElement("div");
-      const productLabel = document.createElement("span");
-
-      productField.classList.add("product-field");
-      productLabel.classList.add("product-label");
+      const productField = _createElement("div", "product-field");
+      const productLabel = _createElement("span", "product-label");
 
       productLabel.innerHTML = `${label}:`;
       const text = document.createTextNode(product[label.toLowerCase()]);
