@@ -10,10 +10,8 @@
 }
 
 .product {
-  flex: 1;
   border: 1px solid black;
   padding: 20px;
-  margin: 10px;
 }
 
 .product-field {
@@ -26,10 +24,11 @@
   margin-right: 10px;
 }
 
-.product-list {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.product-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .product-row {

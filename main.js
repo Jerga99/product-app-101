@@ -40,8 +40,6 @@ function runApp() {
 
   const products = [product1, product2, product3, product4];
 
-  const container = document.getElementById("productContainer");
-
   const createProductRow = () => {
     const row = document.createElement("div");
     row.classList.add("product-row");
@@ -71,16 +69,11 @@ function runApp() {
     return productElement;
   }
 
-  let row;
+  const container = document.getElementById("productContainer");
 
-  products.forEach((product, i) => {
+  products.forEach(product => {
     const productElement = createProductElement(product);
-    if (i % 2 === 0) {
-      row = createProductRow();
-      container.appendChild(row);
-    }
-
-    row.appendChild(productElement);
+    container.appendChild(productElement);
   })
 
 }
