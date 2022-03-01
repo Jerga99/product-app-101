@@ -5,9 +5,9 @@ runApp();
 
 function runApp() {
 
-  Array.prototype.customForEach = function() {
+  Array.prototype.customForEach = function(callback) {
     for (let i = 0; i < this.length; i++) {
-      console.log(this[i]);
+      callback(this[i], i);
     }
   }
 
@@ -20,7 +20,7 @@ function runApp() {
 
   const container = document.getElementById("productContainer");
 
-  products.forEach(product => {
+  products.customForEach(product => {
     const productElement = createProductElement(product);
     container.appendChild(productElement);
   })
@@ -28,7 +28,20 @@ function runApp() {
   const numbers = [1,2,3,4];
   const animals = ["dog", "cat", "horse"];
 
-  products.customForEach();
-  numbers.customForEach();
-  animals.customForEach();
+  function displayProduct(item, index) {
+    console.log("INDEX: ", index);
+    console.log(item);
+  }
+
+  products.customForEach(displayProduct);
+
+  numbers.customForEach(function(item, index) {
+    console.log("INDEX: ", index);
+    console.log(item);
+  });
+
+  animals.customForEach((item, index) => {
+    console.log("INDEX: ", index);
+    console.log(item);
+  });
 }
