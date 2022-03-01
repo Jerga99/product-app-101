@@ -6,8 +6,9 @@ runApp();
 function runApp() {
 
   Array.prototype.customForEach = function() {
-    console.log("My Custom For Each!");
-    console.log(this);
+    for (let i = 0; i < this.length; i++) {
+      console.log(this[i]);
+    }
   }
 
   const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
