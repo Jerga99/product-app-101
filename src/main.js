@@ -5,12 +5,6 @@ runApp();
 
 function runApp() {
 
-  Array.prototype.customForEach = function(callback) {
-    for (let i = 0; i < this.length; i++) {
-      callback(this[i], i);
-    }
-  }
-
   const product1 = new Product("Laptop", "eletronics", 500, "usd", "some_url_of_image");
   const product2 = new Product("Super shoes", "clothing", 50, "usd", "some_url_of_image");
   const product3 = new Product("Smartphone", "phones", 300, "usd", "some_url_of_image");
@@ -26,22 +20,16 @@ function runApp() {
   })
 
   const numbers = [1,2,3,4];
-  const animals = ["dog", "cat", "horse"];
 
-  function displayProduct(item, index) {
-    console.log("INDEX: ", index);
-    console.log(item);
-  }
+  const numbers2 = numbers.customMap((item) => {
+    return item * 10;
+  })
 
-  products.customForEach(displayProduct);
+  const productPrices = products.customMap((product) => {
+    return product.name;
+  })
 
-  numbers.customForEach(function(item, index) {
-    console.log("INDEX: ", index);
-    console.log(item);
-  });
+  console.log(numbers2);
+  console.log(productPrices);
 
-  animals.customForEach((item, index) => {
-    console.log("INDEX: ", index);
-    console.log(item);
-  });
 }
