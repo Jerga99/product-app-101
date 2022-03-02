@@ -18,18 +18,4 @@ function runApp() {
     const productElement = createProductElement(product);
     container.appendChild(productElement);
   })
-
-  const numbers = [1,2,3,4];
-
-  const numbers2 = numbers.customMap((item) => {
-    return item * 10;
-  })
-
-  const productPrices = products.customMap((product) => {
-    return product.name;
-  })
-
-  console.log(numbers2);
-  console.log(productPrices);
-
 }
