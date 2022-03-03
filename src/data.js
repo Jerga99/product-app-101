@@ -29,3 +29,9 @@ const PRODUCT_DATA = [{
 function getProductData() {
   return PRODUCT_DATA;
 }
+
+function getProductDataAsync(callback) {
+  return setTimeout(function() {
+    callback(PRODUCT_DATA);
+  }, 3000);
+}
