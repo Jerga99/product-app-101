@@ -30,8 +30,10 @@ function getProductData() {
   return PRODUCT_DATA;
 }
 
-function getProductDataAsync(callback) {
-  return setTimeout(function() {
-    callback(PRODUCT_DATA);
-  }, 3000);
+function getProductDataAsync() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("Hello World");
+    }, 3000);
+  })
 }
