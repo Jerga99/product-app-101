@@ -25,3 +25,7 @@ const PRODUCT_DATA = [{
   currency: "usd",
   image: "some_url_of_image"
 }]
+
+function getProductData() {
+  return PRODUCT_DATA;
+}

@@ -3,8 +3,8 @@
 runApp();
 
 function runApp() {
-
-  const products = PRODUCT_DATA.map(item =>
+  const productData = getProductData();
+  const products = productData.map(item =>
     new Product(item.name, item.type, item.price, item.currency, item.image)
   );
 
