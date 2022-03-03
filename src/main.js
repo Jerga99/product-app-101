@@ -3,7 +3,8 @@
 runApp();
 
 async function runApp() {
-  const productData = await getProductDataAsync()
+  const response = await getProductDataAsync()
+  const productData = await response.json();
 
   const products = productData.map(item =>
     new Product(item.name, item.type, item.price, item.currency, item.image)
