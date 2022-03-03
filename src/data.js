@@ -33,7 +33,7 @@ function getProductData() {
 function getProductDataAsync() {
   return new Promise(function(resolve) {
     setTimeout(function() {
-      resolve("Hello World");
+      resolve(PRODUCT_DATA);
     }, 3000);
   })
 }
