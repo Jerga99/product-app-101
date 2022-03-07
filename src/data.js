@@ -31,8 +31,12 @@ function getProductData() {
 }
 
 function getProductDataAsync() {
-  return new Promise(function(resolve) {
+  return new Promise(function(resolve, reject) {
     setTimeout(function() {
+
+      if (true) {
+        reject(new Error("Oooops some error!!!!"));
+      }
 
       const response = {
         json: async function() {
