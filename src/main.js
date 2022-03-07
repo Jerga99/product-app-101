@@ -21,6 +21,35 @@ runApp();
 //   console.log("Log2");
 // }
 
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  then(callback) {
+    this.name = callback(this.name);
+    return this;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+const dog = new Dog("Alex")
+  .then(newName => {
+    return newName + " Super";
+  })
+  .then(otherName => {
+    return otherName + " Puppy";
+  })
+
+console.log(dog.name);
+console.log(dog.getName().length);
+
+
+
 function runApp() {
   getProductDataAsync().then((response) => {
     response.json().then((productData) => {
