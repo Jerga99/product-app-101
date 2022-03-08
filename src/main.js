@@ -4,7 +4,7 @@ runApp();
 
 async function runApp() {
   try {
-    const response = await getProductDataAsync()
+    const response = await fetch("https://product-app-101-server.vercel.app/api/products");
     const productData = await response.json();
 
     const products = productData.map(item =>
