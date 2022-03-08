@@ -18,6 +18,13 @@ async function runApp() {
     // otherwise provide a red border
     products.customForEach(product => {
       const productElement = createProductElement(product);
+
+      if (product.isOnStock) {
+        productElement.classList.add("is-on-stock");
+      } else {
+        productElement.classList.add("is-not-on-stock");
+      }
+
       container.appendChild(productElement);
     })
   } catch(error) {

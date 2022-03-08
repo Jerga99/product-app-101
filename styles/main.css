@@ -14,6 +14,14 @@
   padding: 20px;
 }
 
+.product.is-on-stock {
+  border-color: green;
+}
+
+.product.is-not-on-stock {
+  border-color: red;
+}
+
 .product-field {
   font-size: 20px;
 }
