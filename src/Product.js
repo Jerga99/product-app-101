@@ -4,13 +4,15 @@ class Product {
     type,
     price,
     currency = "usd",
-    image = "unsplash_url"
+    image = "unsplash_url",
+    isOnStock
   ) {
     this.name = name;
     this.type = type;
     this.price = price;
     this.currency = currency;
     this.image = image;
+    this.isOnStock = isOnStock;
   }
 
   displayInfo(additionalInfo = "") {
