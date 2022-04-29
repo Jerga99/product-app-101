@@ -30,17 +30,15 @@ function ProductItem({product}) {
 async function runApp() {
   try {
     const response = await fetch("https://product-app-101-server.vercel.app/api/products");
-    const productData = await response.json();
-    const products = productData.map(item =>
-      new Product(item.name, item.type, item.price, item.currency, item.image, item.isOnStock)
-    );
-
+    const products = await response.json();
     const container = document.getElementById("productContainer");
 
     products.customForEach(product => {
-      const props = { product, testValue: "Hi There" };
-      debugger
-      container.insertAdjacentHTML("beforeend", ProductItem(props));
+      const props = { product };
+      container.insertAdjacentHTML(
+        "beforeend", 
+        ProductItem(props)
+      );
     })
   } catch(error) {
     console.error(error.message);
