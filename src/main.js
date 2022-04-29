@@ -2,15 +2,9 @@
 
 runApp();
 
-// function parameters, In React JS you think about this params as Props
-function ProductItem({product, testValue}) {
-  // const product = props.product;
-  // const testValue = props.testValue;
-
-  // const { product, testValue } = props;
-
+function ProductItem({product}) {
   return `
-    <div class="product is-on-stock">
+    <div class="product ${product.isOnStock ? "is-on-stock" : "is-not-on-stock"}">
       <div class="product-field">
         <span class="product-label">Name:</span>${product.name}
       </div>
