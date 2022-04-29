@@ -29,8 +29,7 @@ function ProductItem({product}) {
 
 async function runApp() {
   try {
-    const response = await fetch("https://product-app-101-server.vercel.app/api/products");
-    const products = await response.json();
+    const products = await fetchProducts();
     const container = document.getElementById("productContainer");
 
     products.customForEach(product => {
