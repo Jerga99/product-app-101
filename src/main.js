@@ -2,45 +2,43 @@
 
 runApp();
 
-// simulation how React JS components would look like
-function TestItem() {
-  const text = "This is my text item";
-
+function ProductItem() {
   return `
-    <div class="test-item">
-      <span>${text}</span>
+    <div class="product is-on-stock">
+      <div class="product-field">
+        <span class="product-label">Name:</span>Laptop
+      </div>
+      <div class="product-field">
+        <span class="product-label">Type:</span>electronics
+      </div>
+      <div class="product-field">
+        <span class="product-label">Price:</span>20
+      </div>
+      <div class="product-field">
+        <span class="product-label">Currency:</span>usd
+      </div>
+      <div class="product-field">
+        <span class="product-label">Image:</span>https://product-app-101-server.vercel.app/images/laptop.jpeg
+      </div>
+      <div class="product-field">
+        <span class="product-label">IsOnStock:</span>true
+      </div>
     </div>
   `
 }
-
-const testContainer = document.getElementById("testContainer");
-testContainer.insertAdjacentHTML("beforeend", TestItem());
-
 
 async function runApp() {
   try {
     const response = await fetch("https://product-app-101-server.vercel.app/api/products");
     const productData = await response.json();
-    console.log(productData);
     const products = productData.map(item =>
       new Product(item.name, item.type, item.price, item.currency, item.image, item.isOnStock)
     );
 
     const container = document.getElementById("productContainer");
 
-    // if product is on stock (isOnStock == true)
-    // then provide a green border to the product element
-    // otherwise provide a red border
     products.customForEach(product => {
-      const productElement = createProductElement(product);
-
-      if (product.isOnStock) {
-        productElement.classList.add("is-on-stock");
-      } else {
-        productElement.classList.add("is-not-on-stock");
-      }
-
-      container.appendChild(productElement);
+      container.insertAdjacentHTML("beforeend", ProductItem());
     })
   } catch(error) {
     console.error(error.message);
