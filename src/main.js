@@ -2,6 +2,21 @@
 
 runApp();
 
+// simulation how React JS components would look like
+function TestItem() {
+  const text = "This is my text item";
+
+  return `
+    <div class="test-item">
+      <span>${text}</span>
+    </div>
+  `
+}
+
+const testContainer = document.getElementById("testContainer");
+testContainer.insertAdjacentHTML("beforeend", TestItem());
+
+
 async function runApp() {
   try {
     const response = await fetch("https://product-app-101-server.vercel.app/api/products");
