@@ -30,15 +30,9 @@ function ProductItem({product}) {
 async function runApp() {
   try {
     const products = await fetchProducts();
-    const container = document.getElementById("productContainer");
+    const children = products.map(product => ProductItem({product}))
 
-    products.customForEach(product => {
-      const props = { product };
-      container.insertAdjacentHTML(
-        "beforeend", 
-        ProductItem(props)
-      );
-    })
+    ReactivityDOM.render(children);
   } catch(error) {
     console.error(error.message);
   }
