@@ -2,14 +2,12 @@
 
 
 const ReactivityDOM = {
-  render(children) {  
-    const container = document.getElementById("productContainer");
+  render(child) {  
+    const app = document.getElementById("app");
 
-    children.forEach(child => {
-      container.insertAdjacentHTML(
-        "beforeend", 
-        child
-      );
-    })
+    app.insertAdjacentHTML(
+      "beforeend", 
+      child
+    ); 
   }
 }
