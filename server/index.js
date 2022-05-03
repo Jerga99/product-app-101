@@ -1,8 +1,10 @@
 
-// Node js is using CommonJS
-// Browser is implementing EcmaScript standarts, ES
+// Node js is using CommonJS module system
+// Browser and Node JS are implementing EcmaScript standarts, ES
 
-const Product = require("./src/Product");
+const {Product, callMe} = require("./src/Product");
 
 const product = new Product("TV");
+
 product.log();
+callMe();

@@ -10,4 +10,9 @@ class Product {
   }
 }
 
-module.exports = Product;
+function callMe() {
+  console.log("I have been called!");
+}
+
+exports.callMe = callMe;
+exports.Product = Product;
