@@ -1,10 +1,8 @@
 
-// Node js is using CommonJS module system
-// Browser and Node JS are implementing EcmaScript standarts, ES
+const { uniqueNamesGenerator, animals } = require('unique-names-generator');
 
-const {Product, callMe} = require("./src/Product");
+const randomName = uniqueNamesGenerator({ 
+  dictionaries: [animals] 
+});
 
-const product = new Product("TV");
-
-product.log();
-callMe();
+console.log(randomName);
