@@ -1,3 +1,8 @@
 
+// Node js is using CommonJS
+// Browser is implementing EcmaScript standarts, ES
 
-console.log("Hello Server");
+const Product = require("./src/Product");
+
+const product = new Product("TV");
+product.log();
