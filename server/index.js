@@ -1,15 +1,19 @@
 
+const express = require("express");
+const path = require("path");
+const app = express();
 
-const http = require("http");
+const PORT = process.env.PORT || 3000;
 
-const server = http.createServer(function(req, res) {
+const buildPath = path.join(__dirname, "..", "dist");
+app.use(express.static(buildPath));
 
-  // connect to DB
-  res.writeHead(200, {"Content-Type": "text/html"});
-  res.write("<html><body><p>This is home page</p></body></html>");
-  res.end();
+app.get("*", (req, res) => {
+  res.sendFile(buildPath + "/index.html");
+})
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
-server.listen(3000);
-console.log("Server is running on port 3000");
 
