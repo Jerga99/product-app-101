@@ -1,7 +1,7 @@
 
 
 
-const ReactivityDOM = (function() {
+export const ReactivityDOM = (function() {
   function render(child) {  
     const app = document.getElementById("app");
     veryUnsecureFunction();

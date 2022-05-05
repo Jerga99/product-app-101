@@ -1,4 +1,6 @@
-function ProductItem({product}) {
+
+
+export function ProductItem({product}) {
   return `
     <div class="product ${product.isOnStock ? "is-on-stock" : "is-not-on-stock"}">
       <div class="product-field">

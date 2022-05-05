@@ -1,5 +1,8 @@
 
-
+import { fetchProducts } from "./fetch-products";
+import { ProductItem } from "./components/ProductItem";
+import { ProductPage } from "./components/ProductPage";
+import { ReactivityDOM } from "./reactivity";
 
 (function() {
   runApp();
