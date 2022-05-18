@@ -13,20 +13,40 @@ const root = ReactDOM.createRoot(
 );
 
 function MyReactComponent({title}) {
+  const helloWorld = "My custom text"
   return (
     <div>
-      My first react component
+      My first react component {title} {helloWorld}
     </div>
   )
 }
 
-const element = React.createElement(
-  MyReactComponent, 
-  {title: "Custom Text"}, 
-  null,
-);
+function Whatever() {
+  return (
+    <div>
+      <MyReactComponent title="Some Text!" />
+      <p>Hi paragraph!</p>
+    </div>
+  )
+}
 
-root.render(element);
+function App() {
+  const test = "Just Testing";
+  return (
+    <div>
+      <MyReactComponent title={test} />
+      <div>Hello World</div>
+      <div>
+        <div>
+          Hi there!
+        </div>
+        <Whatever />
+      </div>
+    </div>
+  )
+}
+
+root.render(<App />);
 
 (function() {
   runApp();
