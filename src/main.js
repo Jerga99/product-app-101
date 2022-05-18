@@ -12,7 +12,20 @@ const root = ReactDOM.createRoot(
   document.getElementById("reactApp")
 );
 
-const element = React.createElement("div", null, "My first react component");
+function MyReactComponent({title}) {
+
+  return React.createElement(
+    "div", 
+    null, 
+    `My first react component: ${title}`
+  );
+}
+
+const element = React.createElement(
+  MyReactComponent, 
+  {title: "Custom Text"}, 
+  null,
+);
 
 root.render(element);
 
