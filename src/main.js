@@ -4,6 +4,18 @@ import sayHello, { ProductItem } from "./components/ProductItem";
 import { ProductPage } from "./components/ProductPage";
 import { ReactivityDOM } from "./reactivity";
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+
+const root = ReactDOM.createRoot(
+  document.getElementById("reactApp")
+);
+
+const element = React.createElement("div", null, "My first react component");
+
+root.render(element);
+
 (function() {
   runApp();
 
