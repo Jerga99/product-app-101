@@ -1,6 +1,6 @@
 
 import { fetchProducts } from "./fetch-products";
-import { ProductItem } from "./components/ProductItem";
+import sayHello, { ProductItem } from "./components/ProductItem";
 import { ProductPage } from "./components/ProductPage";
 import { ReactivityDOM } from "./reactivity";
 
@@ -9,6 +9,7 @@ import { ReactivityDOM } from "./reactivity";
 
   async function runApp() {
     try {
+      sayHello();
       const products = await fetchProducts();
       const children = products.map(product => ProductItem({product}))
       ReactivityDOM.render(ProductPage({children}));

@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ProductPage\": () => (/* binding */ ProductPage)\n/* harmony export */ });\n\n\nfunction ProductPage({children}) {\n\n  return `\n    <div class=\"page\">\n      <div class=\"container\">\n        <h1>New Items!</h1>\n        <div class=\"product-grid\">\n          ${children.join(\" \")}\n        </div>\n      </div>\n    </div>\n  `\n}\n\n//# sourceURL=webpack://product-app/./src/components/ProductPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ProductPage\": () => (/* binding */ ProductPage)\n/* harmony export */ });\n\n\nfunction ProductPage({children}) {\n\n  return `\n    <div class=\"page\">\n      <div class=\"container\">\n        <h1>New Products!!!</h1>\n        <div class=\"product-grid\">\n          ${children.join(\" \")}\n        </div>\n      </div>\n    </div>\n  `\n}\n\n//# sourceURL=webpack://product-app/./src/components/ProductPage.js?");
 
 /***/ }),
 

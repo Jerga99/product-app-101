@@ -1,5 +1,13 @@
 
 
+// ES Module System
+
+// default export
+export default function helloWorld() {
+  console.log("Hello World");
+}
+
+// named export
 export function ProductItem({product}) {
   return `
     <div class="product ${product.isOnStock ? "is-on-stock" : "is-not-on-stock"}">
