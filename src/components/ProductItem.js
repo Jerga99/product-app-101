@@ -1,34 +1,28 @@
 
+import React from "react";
 
-// ES Module System
-
-// default export
-export default function helloWorld() {
-  console.log("Hello World");
-}
-
-// named export
 export function ProductItem({product}) {
-  return `
-    <div class="product ${product.isOnStock ? "is-on-stock" : "is-not-on-stock"}">
-      <div class="product-field">
-        <span class="product-label">Name:</span>${product.name}
+ 
+  return (
+    <div className={`product ${product.isOnStock ? "is-on-stock" : "is-not-on-stock"}`}>
+      <div className="product-field">
+        <span className="product-label">Name:</span>{product.name}
       </div>
-      <div class="product-field">
-        <span class="product-label">Type:</span>${product.type}
+      <div className="product-field">
+        <span className="product-label">Type:</span>{product.type}
       </div>
-      <div class="product-field">
-        <span class="product-label">Price:</span>${product.price}
+      <div className="product-field">
+        <span className="product-label">Price:</span>{product.price}
       </div>
-      <div class="product-field">
-        <span class="product-label">Currency:</span>${product.currency}
+      <div className="product-field">
+        <span className="product-label">Currency:</span>{product.currency}
       </div>
-      <div class="product-field">
-        <span class="product-label">Image:</span>${product.image}
+      <div className="product-field">
+        <span className="product-label">Image:</span>{product.image}
       </div>
-      <div class="product-field">
-        <span class="product-label">IsOnStock:</span>${product.isOnStock}
+      <div className="product-field">
+        <span className="product-label">IsOnStock:</span>{`${product.isOnStock}`}
       </div>
     </div>
-  `
+  )
 }

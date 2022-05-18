@@ -1,15 +1,8 @@
 
 import React, {useEffect, useState} from "react";
+import { ProductPage } from "./components/ProductPage";
+import { ProductItem } from "./components/ProductItem";
 import { fetchProducts } from "./fetch-products";
-
-function CustomComponent({children}) {
-  return (
-    <div>
-      Hello World
-      {children}
-    </div>
-  )
-}
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -25,20 +18,13 @@ export default function App() {
 
   // JSX!
   return (
-    <div>
-      <CustomComponent> 
-        <div>
-          <div>Hi There</div>
-          <div>User</div>
-        </div>
-      </CustomComponent>
+    <ProductPage>
       {products.map(product =>
-        <div key={product.image}>
-          <p>
-            {product.name}: <span>{product.price}$</span>
-          </p>
-        </div>
+        <ProductItem 
+          key={product.image} 
+          product={product} 
+        />
       )}
-    </div>
+    </ProductPage>
   )
 }
