@@ -1,19 +1,39 @@
 
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { fetchProducts } from "./fetch-products";
+
+function CustomComponent({children}) {
+  return (
+    <div>
+      Hello World
+      {children}
+    </div>
+  )
+}
 
 export default function App() {
-  // const nums = [1,2,3];
-  const products = [
-    {name: "Skateboard", price: 23, id: "1sad7s89"},
-    {name: "PC", price: 222, id: "asd87d9"},
-    {name: "Phone", price: 111, id: "sdad7as9"},
-  ]
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const products = await fetchProducts();
+      setProducts(products);
+    }
+
+    getData();
+  }, []);
+
   // JSX!
   return (
     <div>
-      Something!
+      <CustomComponent> 
+        <div>
+          <div>Hi There</div>
+          <div>User</div>
+        </div>
+      </CustomComponent>
       {products.map(product =>
-        <div key={product.id}>
+        <div key={product.image}>
           <p>
             {product.name}: <span>{product.price}$</span>
           </p>
