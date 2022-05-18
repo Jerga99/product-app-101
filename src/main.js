@@ -13,12 +13,11 @@ const root = ReactDOM.createRoot(
 );
 
 function MyReactComponent({title}) {
-
-  return React.createElement(
-    "div", 
-    null, 
-    `My first react component: ${title}`
-  );
+  return (
+    <div>
+      My first react component
+    </div>
+  )
 }
 
 const element = React.createElement(
